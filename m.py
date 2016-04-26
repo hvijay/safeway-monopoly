@@ -96,7 +96,7 @@ for c in collected:
 
 for g in groups:
 	for e in g:
-		print "group {0}: {1} collected, {2} total".format(e[0][0], len(g & set(collected)), len(g))
+		print "group {0}: {1} collected, {2} total, needed: {3}".format(e[0][0], len(g & set(collected)), len(g), g - set(collected))
 		break
 
 	if (g.issubset(collected)):
